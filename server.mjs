@@ -15,7 +15,7 @@ mongoose
   .catch((err) => console.log(err.message));
 
 app.use("/api/portfolio", portfolioroutes);
-const PORT=process.env.PORT;
-app.listen(PORT, (req, res) => {
+const PORT=process.env.PORT || 5000;
+app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
